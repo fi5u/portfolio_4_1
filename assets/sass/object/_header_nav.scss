@@ -1,0 +1,16 @@
+.header-nav {
+    li {
+        width: $size-btn-sq;
+
+        a {
+            display: block;
+            height: $size-btn-sq;
+
+            background-color: $col1;
+
+            &:hover {
+                background-color: $col3;
+            }
+        }
+    }
+}
