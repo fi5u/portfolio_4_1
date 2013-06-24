@@ -1,16 +1,46 @@
 .header-nav {
+    position: absolute;
+    right: -$size-btn-sq - $size-padding-m-abs;
+
+    width: $size-btn-sq;
+
     li {
+        @include ir;
+
         width: $size-btn-sq;
+
+        background-color: $col1;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        &:hover {
+            background-color: $col3;
+        }
 
         a {
             display: block;
             height: $size-btn-sq;
-
-            background-color: $col1;
-
-            &:hover {
-                background-color: $col3;
-            }
         }
     }
+
+    @include media($break-s) {
+        right: 0;
+        width: auto;
+
+        li {
+            display: inline-block;
+        }
+    }
+}
+
+.header-nav__twitter {
+    @extend .icon--twitter--light;
+}
+
+.header-nav__linkedin {
+    @extend .icon--linkedin--light;
+}
+
+.header-nav__message {
+    @extend .icon--message--light;
 }

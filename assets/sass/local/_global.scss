@@ -5,5 +5,25 @@
 }
 
 body {
+    background: $col4;
+}
+
+.outer-wrap,
+.inner-wrap {
+    width: 100%;
+    position: relative;
+}
+
+.outer-wrap {
+    overflow: hidden;
+}
+
+.inner-wrap {
     background: $col1;
+    right: 0;
+    @include transition (all 0.2s ease-in-out);
+}
+
+.nav-open .inner-wrap {
+    right: $size-btn-sq + $size-padding-m-abs;
 }

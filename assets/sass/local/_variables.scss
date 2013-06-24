@@ -9,29 +9,25 @@ $size-padding-s: 0.6em;
 $size-padding-m: 1em;
 $size-padding-l: 1.4em;
 
+$size-padding-m-abs: 16px;
+
 $size-btn-sq: 50px;
-
-
-/* grid */
-$total-columns: 12;
-$column-width: 60px;
-$gutter-width: 20px;
-$grid-padding: 0;
+$size-portfolio-item-h: 160px;
 
 
 /* grid */
 $grid-columns: 12;
-$column: 96px;
-$gutter: 16px;
-$max-width: 1328px;
+$column: 6em; // 96px @ 16px
+$gutter: 1em; // 16px @ 16px
+$max-width: 83em; // 1328px @ 16px
 $grid-padding: 0px;
 
 
 /* breakpoints */
-$break-xs: 320px;
-$break-s: 480px;
-$break-m: 768px;
-$break-l: 1024px;
+$break-xs: 20em; // 320px @ 16px
+$break-s: 30em; // 480px @ 16px
+$break-m: 48em; // 768px @ 16px
+$break-l: 64em; // 1024px; @ 16px
 
 
 /* colors */
