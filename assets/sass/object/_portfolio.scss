@@ -5,11 +5,22 @@
     height: $size-portfolio-item-h;
     margin-top: $size-padding-s;
     background: lightgray;
+    z-index: 1;
 
     h3 {
         display: inline-block;
-        margin-top: 0;
-        background: $col5;
+        position: absolute;
+        z-index: 5;
+        height: $size-small-btn;
+        padding: 2px $size-padding-s 0 $size-padding-s;
+        margin: 0;
+        color: $col1;
+        line-height: $size-small-btn;
+        background: $col2;
+    }
+
+    p {
+        margin: 0;
     }
 }
 
@@ -33,6 +44,7 @@
     top: 100%;
     opacity: 0.8;
     z-index: 2;
+    padding: ($size-small-btn + $size-padding-s) $size-padding-s $size-padding-s;
     background: $col1;
 }
 
@@ -40,4 +52,11 @@
     .portfolio__item__textblock {
         top: 0%;
     }
+}
+
+.portfolio__item__buttonblock {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
 }
