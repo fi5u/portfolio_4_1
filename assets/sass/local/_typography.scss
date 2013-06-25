@@ -1,9 +1,10 @@
 body {
-    font-family: $font;
     color: #fff;
 }
 
 p {
+    font-family: $font;
+
     a { /* increase inline clickable area */
         position: relative;
         padding: .5em;
@@ -14,4 +15,11 @@ p {
 
 a,
 a:visited {
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $font-bold;
 }
