@@ -1,3 +1,47 @@
 .page-footer {
+    padding: 0 5px;
+    //background: $col1;
+    border-top: 1px solid $col1;
 
+    p {
+        font-family: $font;
+        font-size: $font-size-s;
+    }
+
+    span {
+        margin: 0 $size-padding-l;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    a {
+        color: $col2;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @include media(min-height $break-h-s min-width $break-l) {
+        padding-top: 20px;
+    }
+
+    @include media(min-height $break-h-m min-width $break-l) {
+        padding-top: 40px;
+    }
+
+    @include media(min-height $break-h-l min-width $break-l) {
+        padding-top: 60px;
+    }
+}
+
+.page-footer__inwrap {
+    @include outer-container;
 }

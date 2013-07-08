@@ -5,6 +5,8 @@ $font-size-m: 1em;
 $font-size-m-minus: 0.875em;
 $font-size-s: 0.8em;
 
+$size-font-base: 16px;
+
 $size-padding-s: 0.6em;
 $size-padding-m: 1em;
 $size-padding-l: 1.4em;
@@ -30,6 +32,10 @@ $break-s: 30em; // 480px @ 16px
 $break-m: 48em; // 768px @ 16px
 $break-l: 64em; // 1024px; @ 16px
 
+$break-h-s: 800px;
+$break-h-m: 960px;
+$break-h-l: 1140px;
+
 
 /* colors */
 $col1: #6cc5c9; //turquois
@@ -37,8 +43,13 @@ $col2: #d6fdff; //turquois-white
 $col3: #89faff; //turquois-vivid
 $col4: #6b7f7f; //grey
 $col5: #ffa2df; //pink
+$col6: #333; //real grey
 
 
 /* typography */
 $font: "Idealist Sans Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$font-bold: "Idealist Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-body: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-lineh-body: 1.4;
+
+/* misc */
+$timing-function: $ease-out-quint;

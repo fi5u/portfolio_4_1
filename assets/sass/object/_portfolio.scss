@@ -1,10 +1,44 @@
+.portfolio {
+    @include clearfix;
+
+    @include media($break-m) {
+        @include span-columns(8);
+    }
+
+    @include media($break-l) {
+        @include span-columns(12);
+    }
+
+    @include media(min-height $break-h-s min-width $break-l) {
+        margin-bottom: 20px;
+    }
+
+    @include media(min-height $break-h-m min-width $break-l) {
+        margin-bottom: 40px;
+    }
+
+    @include media(min-height $break-h-l min-width $break-l) {
+        margin-bottom: 60px;
+    }
+}
+
+%portfolio__column {
+    @include media($break-l) {
+        @include span-columns(6);
+    }
+}
+
+.portfolio__column--1,
+.portfolio__column--2 {
+    @extend %portfolio__column;
+}
+
 .portfolio__item {
     position: relative;
     overflow: hidden;
     width: 100%;
     height: $size-portfolio-item-h;
-    margin-top: $size-padding-s;
-    background: lightgray;
+    margin-top: $gutter;
     z-index: 1;
 
     h3 {
@@ -14,13 +48,27 @@
         height: $size-small-btn;
         padding: 2px $size-padding-s 0 $size-padding-s;
         margin: 0;
-        color: $col1;
+        color: #fff;
         line-height: $size-small-btn;
-        background: $col2;
+        background: $col1;
     }
 
     p {
         margin: 0;
+    }
+}
+
+.portfolio__column--1 {
+    .portfolio__item:first-child {
+        margin-top: 0;
+    }
+}
+
+.portfolio__column--2 {
+    @include media($break-l) {
+        .portfolio__item:first-child {
+            margin-top: 0;
+        }
     }
 }
 
@@ -45,7 +93,7 @@
     opacity: 0.8;
     z-index: 2;
     padding: ($size-small-btn + $size-padding-s) $size-padding-s $size-padding-s;
-    background: $col1;
+    background: $col6;
 }
 
 .portfolio__item:hover {
@@ -54,9 +102,16 @@
     }
 }
 
-.portfolio__item__buttonblock {
+.portfolio__item__button--more {
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: 5;
+}
+
+.portfolio__item__employer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 6;
 }

@@ -29,5 +29,10 @@
     padding: 0 $grid-padding;
 }
 
-@mixin buttonface {
+@function rem-px($val: 1) {
+    @return $val * $size-font-base+px;
+}
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
 }

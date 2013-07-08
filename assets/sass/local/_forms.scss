@@ -1,0 +1,59 @@
+form {
+    margin-bottom: 0;
+}
+
+button,
+.button {
+    height: $size-small-btn;
+    margin: 0;
+    padding: 0 $size-padding-s;
+    border: none;
+
+    font-family: $font;
+    font-size: $font-size-m;
+    line-height: $size-small-btn + 0.1;
+    text-decoration: none;
+
+    color: #fff;
+    background: $col1;
+
+    &:hover {
+        color: $col2;
+        background: $col4;
+    }
+
+    &:active {
+        background: darken($col4, 10%);
+    }
+}
+
+#{$all-text-inputs},
+textarea {
+    padding: $size-small-btn;
+    margin-bottom: 0;
+    border-radius: 0px;
+    background: $col2;
+    border: none;
+    font-family: $font-body;
+
+    &::-webkit-input-placeholder {
+        color:    $col1 !important;
+    }
+    &:-moz-placeholder {
+        color:    $col1 !important;
+    }
+    &::-moz-placeholder {
+        color:    $col1 !important;
+    }
+    &:-ms-input-placeholder {
+        color:    $col1 !important;
+    }
+}
+
+#{$all-text-inputs} {
+    height: $size-small-btn;
+}
+
+textarea {
+    padding-top: $size-small-btn / 2;
+}

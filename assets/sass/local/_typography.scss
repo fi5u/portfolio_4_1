@@ -1,9 +1,11 @@
 body {
     color: #fff;
+    color: $col2;
 }
 
 p {
-    font-family: $font;
+    font-family: $font-body;
+    line-height: $font-lineh-body;
 
     a { /* increase inline clickable area */
         position: relative;
@@ -21,5 +23,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: $font-bold;
+    margin-top: 0;
+    margin-bottom: $gutter / 2;
+    font-family: $font;
 }

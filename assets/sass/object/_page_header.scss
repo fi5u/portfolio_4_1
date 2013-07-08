@@ -1,5 +1,5 @@
 .page-header {
-    background: #000;
+    background: $col6;
     color: #fff;
 
     @include media($break-s) {
@@ -8,18 +8,9 @@
 }
 
 .page-header__inwrap {
-    @include container;
+    @include outer-container;
+    position: relative;
 }
-
-/*.page-header__logo {
-    @include media($break-s) {
-        @extend .logo-main--large;
-        width: 385px;
-        height: 100px;
-    }
-}
-*/
-
 
 .page-header__logo {
     @extend .logo-main--small;
@@ -27,6 +18,8 @@
 
     width: 192px;
     height: 50px;
+
+    margin-left: 5px;
 
     background-repeat: no-repeat;
     background-position: center center;

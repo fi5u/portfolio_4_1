@@ -1,0 +1,69 @@
+.contact {
+    @include clearfix;
+
+    margin: $gutter 0;
+    padding: 0 5px;
+
+    .contact__inputgroup {
+        @include clearfix;
+        @include span-columns(12);
+        position: relative;
+        margin-bottom: $gutter;
+    }
+
+    .contact__inputgroup--textarea {
+        height: 170px;
+    }
+
+    input {
+        @include span-columns(6);
+
+        &:last-child {
+            float: right;
+            margin-right: 0;
+        }
+
+        @include media($break-m) {
+            @include span-columns(12);
+
+            &:first-child {
+                margin-bottom: $gutter;
+            }
+        }
+
+        @include media($break-l) {
+            @include span-columns(6);
+
+            &:first-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    textarea {
+        @include span-columns(12);
+        @include transition(all 0.4s $timing-function);
+
+        height: 105px;
+        margin-bottom: $gutter;
+
+
+        &.active {
+            height: $size-portfolio-item-h;
+        }
+    }
+
+    button {
+        float: right;
+    }
+
+    @include media($break-m) {
+        padding-left: $gutter;
+    }
+
+    @include media($break-l) {
+        @include span-columns(6);
+
+        padding-left: 0;
+    }
+}

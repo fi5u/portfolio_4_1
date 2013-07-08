@@ -14,7 +14,7 @@
         background-position: center center;
 
         &:hover {
-            background-color: $col3;
+            background-color: $col4;
         }
 
         a {
@@ -41,6 +41,10 @@
     @extend .icon--linkedin--light;
 }
 
-.header-nav__message {
+.header-nav .header-nav__message {
     @extend .icon--message--light;
+
+    @include media($break-s) {
+        display: none;
+    }
 }
