@@ -1974,15 +1974,15 @@ button,
   font-size: 1em;
   line-height: 1.5em;
   text-decoration: none;
-  color: #fff;
-  background: #6cc5c9; }
+  color: #d6fdff;
+  background: #6b7f7f; }
   button:hover,
   .button:hover {
     color: #d6fdff;
-    background: #6b7f7f; }
+    background: #546363; }
   button:active,
   .button:active {
-    background: #546363; }
+    background: #3c4848; }
 
 input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"],
 textarea {
@@ -2263,9 +2263,9 @@ body {
     height: 1.4em;
     padding: 2px 0.6em 0 0.6em;
     margin: 0;
-    color: #fff;
+    color: #d6fdff;
     line-height: 1.4em;
-    background: #6cc5c9; }
+    background: #6b7f7f; }
   .portfolio__item p {
     margin: 0; }
 

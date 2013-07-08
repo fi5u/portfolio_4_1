@@ -14,16 +14,16 @@ button,
     line-height: $size-small-btn + 0.1;
     text-decoration: none;
 
-    color: #fff;
-    background: $col1;
+    color: $col2;
+    background: $col4;
 
     &:hover {
         color: $col2;
-        background: $col4;
+        background: darken($col4, 10%);
     }
 
     &:active {
-        background: darken($col4, 10%);
+        background: darken($col4, 20%);
     }
 }
 
