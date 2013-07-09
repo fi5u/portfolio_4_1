@@ -38,7 +38,7 @@
     overflow: hidden;
     width: 100%;
     height: $size-portfolio-item-h;
-    margin-top: $gutter;
+    margin-bottom: $gutter;
     z-index: 1;
 
     h3 {
@@ -55,20 +55,6 @@
 
     p {
         margin: 0;
-    }
-}
-
-.portfolio__column--1 {
-    .portfolio__item:first-child {
-        margin-top: 0;
-    }
-}
-
-.portfolio__column--2 {
-    @include media($break-l) {
-        .portfolio__item:first-child {
-            margin-top: 0;
-        }
     }
 }
 
