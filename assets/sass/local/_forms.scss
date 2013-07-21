@@ -15,15 +15,21 @@ button,
     text-decoration: none;
 
     color: $col2;
-    background: $col4;
+    //border-bottom: 2px solid lighten($col4,20%);
+    background: $col1;
+    box-shadow: inset 0px -2px darken($col1,30%);
 
     &:hover {
-        color: $col2;
-        background: darken($col4, 10%);
+        background-color: $col4;
+        box-shadow: inset 0px -2px darken($col4,15%);
     }
 
     &:active {
-        background: darken($col4, 20%);
+        //border-bottom-width: 1px;
+        border-top: 1px solid transparent;
+        background-color: darken($col4,15%);
+        box-shadow: inset 0px -1px darken($col4,17%);
+        background-clip: padding-box;
     }
 }
 

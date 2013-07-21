@@ -41,21 +41,21 @@
     margin-bottom: $gutter;
     z-index: 1;
 
-    h3 {
-        display: inline-block;
-        position: absolute;
-        z-index: 5;
-        height: $size-small-btn;
-        padding: 2px $size-padding-s 0 $size-padding-s;
-        margin: 0;
-        color: $col2;
-        line-height: $size-small-btn;
-        background: $col4;
-    }
-
     p {
         margin: 0;
     }
+}
+
+.portfolio__item__title {
+    display: inline-block;
+    position: absolute;
+    z-index: 5;
+    height: $size-small-btn;
+    padding: 2px $size-padding-s 0 $size-padding-s;
+    margin: 0;
+    color: $col2;
+    line-height: $size-small-btn;
+    background: $col4;
 }
 
 .portfolio__item__visual,

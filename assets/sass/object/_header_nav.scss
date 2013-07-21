@@ -13,8 +13,19 @@
         background-repeat: no-repeat;
         background-position: center center;
 
+        box-shadow: inset 0px -2px darken($col1,30%);
+
         &:hover {
             background-color: $col4;
+
+            box-shadow: inset 0px -2px darken($col4,15%);
+        }
+
+        &:active {
+            position: relative;
+            top: 1px;
+            background-color: darken($col4,15%);
+            box-shadow: inset 0px -1px darken($col4,17%);
         }
 
         a {

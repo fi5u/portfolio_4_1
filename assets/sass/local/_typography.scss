@@ -7,16 +7,26 @@ p {
     font-family: $font-body;
     line-height: $font-lineh-body;
 
-    a { /* increase inline clickable area */
-        position: relative;
-        padding: .5em;
-        margin: -.5em;
-        /* */
+    &:first-child {
+        margin-top: 0;
+    }
+
+    a {
+        border-bottom: 1px solid $col4;
+
+        &:hover {
+            text-decoration: none;
+            border-bottom-color: $col1;
+        }
     }
 }
 
 a,
 a:visited {
+    font-family: $font-body;
+    line-height: $font-lineh-body;
+    color: $col2;
+    text-decoration: none;
 }
 
 h1,

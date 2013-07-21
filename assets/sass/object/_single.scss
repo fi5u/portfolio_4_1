@@ -1,0 +1,116 @@
+.single .portfolio__item__visual {
+    position: static;
+}
+
+.single__inwrap {
+    @include outer-container;
+}
+
+.single__imagetext {
+    @include clearfix;
+    position: relative;
+
+    @include media(min-height $break-h-s min-width $break-l) {
+        margin-bottom: 20px;
+    }
+
+    @include media(min-height $break-h-m min-width $break-l) {
+        margin-bottom: 40px;
+    }
+
+    @include media(min-height $break-h-l min-width $break-l) {
+        margin-bottom: 60px;
+    }
+}
+
+.single__imageblock {
+    @include span-columns(12);
+
+    .portfolio__item__title {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    a {
+        display: block;
+    }
+
+    img {
+
+    }
+
+    @include media($break-m) {
+        @include span-columns(6);
+    }
+}
+
+.single__filmstrip-contact {
+    @include clearfix;
+    @include span-columns(12);
+    position: relative;
+}
+
+.single__filmstrip {
+    @include span-columns(12);
+    @include clearfix;
+    margin: $gutter 0;
+
+    img {
+        @include span-columns(4 of 12);
+        @include omega(3n);
+        margin-bottom: 1.2%;
+    }
+
+    @include media($break-m) {
+
+    }
+
+    @include media($break-l) {
+        @include span-columns(6);
+        margin-top: $gutter;
+    }
+}
+
+.single__textblock {
+    @include span-columns(12);
+    padding: 0 5px;
+
+    @include media($break-m) {
+        @include span-columns(6);
+        padding-left: $gutter;
+    }
+}
+
+.single .contact {
+    @include span-columns(12);
+
+    @include media($break-m) {
+        @include span-columns(12);
+        padding-left: 5px;
+    }
+
+    @include media($break-l) {
+        @include span-columns(6);
+    }
+}
+
+.single .contact__inputgroup {
+    @include media($break-m) {
+        @include span-columns(6);
+    }
+
+    @include media($break-l) {
+        @include span-columns(12);
+    }
+}
+
+.single .contact__inputgroup--textarea {
+    @include media($break-m) {
+        padding-left: $gutter;
+    }
+
+    @include media($break-l) {
+        padding-left: 0;
+    }
+}
