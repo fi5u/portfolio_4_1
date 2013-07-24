@@ -40,16 +40,11 @@
     height: $size-portfolio-item-h;
     margin-bottom: $gutter;
     z-index: 1;
-
-    p {
-        margin: 0;
-    }
 }
 
 .portfolio__item__title {
     display: inline-block;
     position: absolute;
-    z-index: 5;
     height: $size-small-btn;
     padding: 2px $size-padding-s 0 $size-padding-s;
     margin: 0;
@@ -74,6 +69,7 @@
 
 .portfolio__item__textblock {
     @include transition(all 0.6s $ease-out-quint);
+    @include prefixer(transition-delay, 0.6s, webkit moz spec);
 
     top: 100%;
     opacity: 0.8;
@@ -84,20 +80,24 @@
 
 .portfolio__item:hover {
     .portfolio__item__textblock {
+        @include prefixer(transition-delay, 0.2s, webkit moz spec);
         top: 0%;
     }
 }
 
-.portfolio__item__button--more {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 5;
-}
-
 .portfolio__item__employer {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 6;
+    top: 0;
+    right: $size-padding-s;
+
+    a:hover:before {
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        width: 100%;
+        padding: 5px 10px;
+        font-size: $font-size-s;
+        background: $col1;
+        content: attr(data-tooltip);
+    }
 }

@@ -1,10 +1,10 @@
 body {
-    color: #fff;
     color: $col2;
 }
 
 p {
     font-family: $font-body;
+    font-size: $font-size-m-minus;
     line-height: $font-lineh-body;
 
     &:first-child {
@@ -18,6 +18,10 @@ p {
             text-decoration: none;
             border-bottom-color: $col1;
         }
+    }
+
+    @include media($break-l) {
+        font-size: $font-size-m;
     }
 }
 

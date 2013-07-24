@@ -57,6 +57,8 @@
     background-color: $col1;
     background-repeat: no-repeat;
     background-position: center center;
+    box-shadow: inset 0px -2px darken($col1,30%);
+
     cursor: pointer;
 
     @include media($break-s) {

@@ -79,10 +79,11 @@
     <div class="single__inwrap">
 
         <div class="single__imagetext">
-            <div class="single__imageblock">
+            <div class="single__imageblock" id="imageblock">
                 <h3 class="portfolio__item__title">Title 1</h3>
-                <a href="assets/img/1328x780.gif">
-                    <img src="assets/img/768x420.gif" alt="Image title">
+
+                <a href="http://placehold.it/1328x780&text=1(lg)" id="imageblock-link">
+                    <img src="http://placehold.it/768x420&text=1(med)" alt="Image title">
                 </a>
             </div>
 
@@ -96,20 +97,20 @@
                 </div>
 
                 <div class="single__buttonblock">
-                    <p><a href="index.html">go back</a></p>
+                    <p><a href="index.html">back</a></p>
                 </div>
             </div>
 
         </div>
 
         <div class="single__filmstrip-contact">
-            <div class="single__filmstrip">
-                <img src="assets/img/768x340.gif" alt="Image title" class="single__preview">
-                <img src="assets/img/768x340.gif" alt="Image title" class="single__preview">
-                <img src="assets/img/768x340.gif" alt="Image title" class="single__preview">
-                <img src="assets/img/768x340.gif" alt="Image title" class="single__preview">
-                <img src="assets/img/768x340.gif" alt="Image title" class="single__preview">
-                <img src="assets/img/768x340.gif" alt="Image title" class="single__preview">
+            <div class="single__filmstrip" id="filmstrip">
+                <a href="http://placehold.it/1328x780&text=1(lg)" class="filmstrip-link"><img src="http://placehold.it/249x140&text=1(sm)" data-medium="http://placehold.it/768x420&text=1(med)" alt="Image title" class="single__preview"></a>
+                <a href="http://placehold.it/1328x780&text=2(lg)" class="filmstrip-link"><img src="http://placehold.it/249x140&text=2(sm)" data-medium="http://placehold.it/768x420&text=2(med)" alt="Image title" class="single__preview"></a>
+                <a href="http://placehold.it/1328x780&text=3(lg)" class="filmstrip-link"><img src="http://placehold.it/249x140&text=3(sm)" data-medium="http://placehold.it/768x420&text=3(med)" alt="Image title" class="single__preview"></a>
+                <a href="http://placehold.it/1328x780&text=4(lg)" class="filmstrip-link"><img src="http://placehold.it/249x140&text=4(sm)" data-medium="http://placehold.it/768x420&text=4(med)" alt="Image title" class="single__preview"></a>
+                <a href="http://placehold.it/1328x780&text=5(lg)" class="filmstrip-link"><img src="http://placehold.it/249x140&text=5(sm)" data-medium="http://placehold.it/768x420&text=5(med)" alt="Image title" class="single__preview"></a>
+                <a href="http://placehold.it/1328x780&text=Responsive+view" class="single__filmstrip__responsive"><img src="assets/img/responsive.svg" alt="Responsive views" class="single__preview" data-medium="http://placehold.it/768x420&text=5(responsive)"></a>
             </div>
 
             <div class="contact" id="contact">
@@ -147,6 +148,7 @@
     <!--<![endif]-->
 
     <script src='assets/js/lib/jquery.flexorder.js'></script>
+<script src='assets/js/lib/svgeezy.js'></script>
 <script src='assets/js/functions.js'></script>
 <script src='assets/js/events.js'></script>
 <script src='assets/js/script.js'></script>

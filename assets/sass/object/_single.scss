@@ -56,7 +56,7 @@
     @include clearfix;
     margin: $gutter 0;
 
-    img {
+    a {
         @include span-columns(4 of 12);
         @include omega(3n);
         margin-bottom: 1.2%;
@@ -78,7 +78,7 @@
 
     @include media($break-m) {
         @include span-columns(6);
-        padding-left: $gutter;
+        padding-left: 0;
     }
 }
 
@@ -92,6 +92,7 @@
 
     @include media($break-l) {
         @include span-columns(6);
+        padding-left: 0;
     }
 }
 
