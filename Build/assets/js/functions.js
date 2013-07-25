@@ -14,6 +14,12 @@ function bindFlexorder() {
         targetContainer: $(".single__imageblock"),
         targetPosition: "end"
     });
+
+    $(".single--404__block1 .contact").flexorder({
+        breakpoint: 768,
+        targetContainer: $(".single--404__block2"),
+        targetPosition: "end"
+    });
 }
 
 function bindSvgeezy() {
@@ -27,7 +33,23 @@ function lightboxVCenter() {
     $(".lightbox__content").css("top",top + "px");
 }
 
+function lightboxAction(action) {
+    if( action === "close" ) {
+        $(".lightbox").fadeOut("fast");
+    }
+}
+
 function lightbox(url) {
+    //get the urls for the lightbox arrows
+    var nextUrl = $("#filmstrip a[href='"+url+"']").next().attr("href");
+    var prevUrl = $("#filmstrip a[href='"+url+"']").prev().attr("href");
+    if( !nextUrl ) {
+        nextUrl = $("#filmstrip a:first").attr("href");
+    }
+    if( !prevUrl ) {
+        prevUrl = $("#filmstrip a:last").attr("href");
+    }
+
     if( $('.lightbox').length > 0 ) {
         $('.lightbox__img').html('<img src="' + url + '">');
         $('.lightbox').fadeIn("fast");
@@ -39,13 +61,17 @@ function lightbox(url) {
                     '<img src="' + url +'">' +
                 '</div>' +
                 '<div class="lightbox__controls">' +
-                    '<div class="lightbox__control--left"></div>' +
-                    '<div class="lightbox__control--right"></div>' +
+                    '<a class="lightbox__control--left"></a>' +
+                    '<a class="lightbox__control--right"></a>' +
                 '</div>' +
             '</div>' +
         '</div>';
         $('body').append(lightbox);
     }
+
+    $(".lightbox__control--right").attr("href",nextUrl);
+    $(".lightbox__control--left").attr("href",prevUrl);
+
     lightboxVCenter();
     event.preventDefault();
 }

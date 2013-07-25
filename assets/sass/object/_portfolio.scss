@@ -51,6 +51,7 @@
     color: $col2;
     line-height: $size-small-btn;
     background: $col4;
+    z-index: 5;
 }
 
 .portfolio__item__visual,
@@ -96,8 +97,13 @@
         left: 0;
         width: 100%;
         padding: 5px 10px;
+        color: $col6;
         font-size: $font-size-s;
         background: $col1;
         content: attr(data-tooltip);
+    }
+
+    & ~ p {
+        margin-top: 0;
     }
 }

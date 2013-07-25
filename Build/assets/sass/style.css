@@ -2192,7 +2192,8 @@ body {
   text-shadow: none;
   color: transparent;
   background-color: transparent;
-  background-image: url(../img/arrow_sprite.png); }
+  background-image: url(../img/arrow_sprite.png);
+  cursor: pointer; }
 
 .lightbox__control--left {
   left: 10px;
@@ -2238,7 +2239,8 @@ body {
   background-position: center center; }
   .page-header__logo a {
     display: block;
-    height: 100%; }
+    height: 100%;
+    color: transparent; }
   @media screen and (min-width: 30em) {
     .page-header__logo {
       width: 385px;
@@ -2375,7 +2377,8 @@ body {
   margin: 0;
   color: #d6fdff;
   line-height: 1.4em;
-  background: #6b7f7f; }
+  background: #6b7f7f;
+  z-index: 5; }
 
 .portfolio__item__visual,
 .portfolio__item__textblock {
@@ -2418,9 +2421,12 @@ body {
     left: 0;
     width: 100%;
     padding: 5px 10px;
+    color: #333333;
     font-size: 0.8em;
     background: #6cc5c9;
     content: attr(data-tooltip); }
+  .portfolio__item__employer ~ p {
+    margin-top: 0; }
 
 .bio {
   margin-top: 1em;
@@ -2431,7 +2437,7 @@ body {
     margin-bottom: 0; }
   @media screen and (min-width: 48em) {
     .bio {
-      padding-left: 1em;
+      padding-left: 0;
       margin-top: 0; } }
   @media screen and (min-width: 64em) {
     .bio {
@@ -2517,7 +2523,7 @@ body {
     float: right; }
   @media screen and (min-width: 48em) {
     .contact {
-      padding-left: 1em; } }
+      padding-left: 0; } }
   @media screen and (min-width: 64em) {
     .contact {
       display: block;
@@ -2728,3 +2734,71 @@ body {
 @media screen and (min-width: 64em) {
   .single .contact__inputgroup--textarea {
     padding-left: 0; } }
+
+.single--404__block1,
+.single--404__block2 {
+  display: block;
+  float: left;
+  margin-right: 1.20482%;
+  width: 100%; }
+  .single--404__block1:last-child,
+  .single--404__block2:last-child {
+    margin-right: 0; }
+  .single--404__block1 .sentence--right,
+  .single--404__block2 .sentence--right {
+    display: none; }
+  @media screen and (min-width: 48em) {
+    .single--404__block1,
+    .single--404__block2 {
+      display: block;
+      float: left;
+      margin-right: 1.20482%;
+      width: 49.39759%; }
+      .single--404__block1:last-child,
+      .single--404__block2:last-child {
+        margin-right: 0; }
+      .single--404__block1 .sentence--right,
+      .single--404__block2 .sentence--right {
+        display: inline; }
+      .single--404__block1 .sentence--below,
+      .single--404__block2 .sentence--below {
+        display: none; } }
+
+.single--404__block1 {
+  padding: 0 5px; }
+  @media screen and (min-width: 48em) {
+    .single--404__block1 {
+      display: block;
+      float: left;
+      margin-right: 1.20482%;
+      width: 49.39759%;
+      padding: 0 0 0 5px; }
+      .single--404__block1:last-child {
+        margin-right: 0; }
+      .single--404__block1 .contact {
+        padding: 0; }
+      .single--404__block1 .contact__inputgroup {
+        display: block;
+        float: left;
+        margin-right: 1.20482%;
+        width: 100%;
+        padding: 0; }
+        .single--404__block1 .contact__inputgroup:last-child {
+          margin-right: 0; } }
+  @media screen and (min-width: 64em) {
+    .single--404__block1 .contact {
+      display: block;
+      float: left;
+      margin-right: 1.20482%;
+      width: 100%; }
+      .single--404__block1 .contact:last-child {
+        margin-right: 0; } }
+
+@media screen and (min-width: 48em) {
+  .single--404__block2 {
+    display: block;
+    float: left;
+    margin-right: 1.20482%;
+    width: 49.39759%; }
+    .single--404__block2:last-child {
+      margin-right: 0; } }

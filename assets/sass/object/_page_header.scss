@@ -27,6 +27,7 @@
     a {
         display: block;
         height: 100%;
+        color: transparent;
     }
 
     @include media($break-s) {

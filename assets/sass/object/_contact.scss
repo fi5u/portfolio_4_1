@@ -58,7 +58,7 @@
     }
 
     @include media($break-m) {
-        padding-left: $gutter;
+        padding-left: 0;
     }
 
     @include media($break-l) {

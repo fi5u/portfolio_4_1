@@ -10,13 +10,22 @@ $("textarea").focusout(function() {
     toggleTextarea();
 });
 
+$("body").on("click", ".lightbox__controls a", function(event) {
+    var url = $(this).attr("href");
+    lightbox(url);
+});
+
 $("#imageblock").on("click", "a#imageblock-link", function(event) {
     var url = $("#imageblock a").attr("href");
     lightbox(url);
 });
 
-$("body").on("click", ".lightbox", function(event) {
-    $(".lightbox").fadeOut("fast");
+
+$("body").on("click", ".lightbox, .lightbox__controls", function(event) {
+    event.stopPropagation();
+    if( $(this).attr("class") !== "lightbox__controls" ) {
+        lightboxAction("close");
+    }
 });
 
 

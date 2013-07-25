@@ -11,7 +11,7 @@
     }
 
     @include media($break-m) {
-        padding-left: $gutter;
+        padding-left: 0;
         margin-top: 0;
     }
 
