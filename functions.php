@@ -52,15 +52,9 @@ add_image_size( "single-small", 249 );
 
 
     //register sub options pages
-/*if(function_exists("register_options_page")) {
-    register_options_page('Header');
-    register_options_page('Section background colours');
-    register_options_page('Kirnauskis section');
-    register_options_page('Business details');
-    register_options_page('Contact form');
-    register_options_page('Personnel');
-    register_options_page('Footer');
-}*/
+if(function_exists("register_options_page")) {
+    register_options_page('Primary info');
+}
 
 
     //remove admin pages
