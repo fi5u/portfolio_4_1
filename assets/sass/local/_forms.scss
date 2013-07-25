@@ -6,7 +6,7 @@ button,
 .button {
     height: $size-small-btn;
     margin: 0;
-    padding: 0 $size-padding-s;
+    padding: 0 $size-padding-s ($size-padding-s * 3);
     border: none;
 
     font-family: $font;
@@ -35,7 +35,7 @@ button,
 
 #{$all-text-inputs},
 textarea {
-    padding: $size-small-btn;
+    //padding: $size-small-btn;
     margin-bottom: 0;
     border-radius: 0px;
     background: $col2;
@@ -58,6 +58,7 @@ textarea {
 
 #{$all-text-inputs} {
     height: $size-small-btn;
+    height: $size-small-btn * 2;
 }
 
 textarea {
