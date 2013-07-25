@@ -45,7 +45,6 @@ function create_post_type() {
     //set image import sizes
 add_image_size( "home", 767, 160, true );
 add_image_size( "single-large", 1439 );
-add_image_size( "single-large", 1439 );
 add_image_size( "single-med", 767 );
 add_image_size( "single-small", 249 );
 
