@@ -1993,7 +1993,8 @@ form {
   margin-bottom: 0; }
 
 button,
-.button {
+.button,
+input[type="submit"] {
   height: 1.4em;
   margin: 0;
   padding: 0 0.6em 1.5em;
@@ -2006,11 +2007,13 @@ button,
   background: #6cc5c9;
   box-shadow: inset 0px -2px #2a6f72; }
   button:hover,
-  .button:hover {
+  .button:hover,
+  input[type="submit"]:hover {
     background-color: #6b7f7f;
     box-shadow: inset 0px -2px #485555; }
   button:active,
-  .button:active {
+  .button:active,
+  input[type="submit"]:active {
     border-top: 1px solid transparent;
     background-color: #485555;
     box-shadow: inset 0px -1px #435050;
@@ -2481,35 +2484,35 @@ body {
       margin-right: 0; }
   .contact .contact__inputgroup--textarea {
     height: 170px; }
-  .contact input {
+  .contact input:not(input[type="submit"]) {
     display: block;
     float: left;
     margin-right: 1.20482%;
     width: 49.39759%; }
-    .contact input:last-child {
+    .contact input:not(input[type="submit"]):last-child {
       margin-right: 0; }
-    .contact input:last-child {
+    .contact input:not(input[type="submit"]):last-child {
       float: right;
       margin-right: 0; }
     @media screen and (min-width: 48em) {
-      .contact input {
+      .contact input:not(input[type="submit"]) {
         display: block;
         float: left;
         margin-right: 1.20482%;
         width: 100%; }
-        .contact input:last-child {
+        .contact input:not(input[type="submit"]):last-child {
           margin-right: 0; }
-        .contact input:first-child {
+        .contact input:not(input[type="submit"]):first-child {
           margin-bottom: 1em; } }
     @media screen and (min-width: 64em) {
-      .contact input {
+      .contact input:not(input[type="submit"]) {
         display: block;
         float: left;
         margin-right: 1.20482%;
         width: 49.39759%; }
-        .contact input:last-child {
+        .contact input:not(input[type="submit"]):last-child {
           margin-right: 0; }
-        .contact input:first-child {
+        .contact input:not(input[type="submit"]):first-child {
           margin-bottom: 0; } }
   .contact textarea {
     display: block;

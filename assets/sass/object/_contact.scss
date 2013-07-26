@@ -15,7 +15,7 @@
         height: 170px;
     }
 
-    input {
+    input:not(input[type="submit"]) {
         @include span-columns(6);
 
         &:last-child {
