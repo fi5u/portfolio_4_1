@@ -19,6 +19,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_url'); ?>/apple-touch-icon-precomposed.png">
+
     <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/style.css'>
 
     <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/modernizr.full.2.6.2.js'></script> <!-- change to production before launch: -->

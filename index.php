@@ -3,7 +3,7 @@
         <div class="main__inwrap">
             <div class="portfolio">
 
-                <?php $portfolio_posts = wp_count_posts("tyot"); ?>
+                <?php $portfolio_posts = wp_count_posts("portfolio"); ?>
                 <?php $portfolio_post_count = $portfolio_posts->publish; ?>
 
                 <div class="portfolio__column--1">
@@ -12,7 +12,7 @@
                 </div>
 
                 <div class="portfolio__column--2">
-                    <?php $postQty = floor($portfolio_post_count / 2); $offset = ceil($portfolio_post_count); ?>
+                    <?php $postQty = floor($portfolio_post_count / 2); $offset = ceil($portfolio_post_count / 2); ?>
                     <?php include(locate_template("part-portfolio-item.php")); ?>
                 </div>
             </div>

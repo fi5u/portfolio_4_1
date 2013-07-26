@@ -51,6 +51,12 @@
                             <a href="<?php echo $img_large_url[0]; ?>" class="filmstrip-link"><img src="<?php echo $img_small_url[0]; ?>" data-medium="<?php echo $img_med_url[0]; ?>" alt="<?php echo $img_desc; ?>" class="single__preview"></a>
                             <?php endwhile; ?>
                         <?php endif; ?>
+                        <?php if( get_field("responsive") ) : ?>
+                            <?php $responsive_id = get_field("responsive"); ?>
+                            <?php $responsive_large_url = wp_get_attachment_url( $responsive_id[0], 'single-large' ); ?>
+                            <?php $responsive_med_url = wp_get_attachment_url( $responsive_id[0], 'single-med' ); ?>
+                            <a href="<?php echo $responsive_large_url[0]; ?>" class="single__filmstrip__responsive"><img src="assets/img/responsive.svg" data-medium="<?php echo $responsive_med_url[0]; ?>" alt="Responsive views" class="single__preview"></a>
+                        <?php endif; ?>
                     <?php endwhile; endif; ?>
                 </div>
 
