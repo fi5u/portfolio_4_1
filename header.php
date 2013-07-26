@@ -57,4 +57,4 @@
                 </div>
             </header>
 
-            <div class="main <?php echo(is_single ? "single" : ""); ?> <?php echo(is_404 ? "single--404" : ""); ?>" role="main">
+            <div class="main <?php echo(is_single() ? "single" : ""); ?> <?php echo(is_404() ? "single--404" : ""); ?>" role="main">
