@@ -2106,6 +2106,11 @@ body {
 
 .main {
   margin-top: 10px; }
+  .main:before, .main:after {
+    content: " ";
+    display: table; }
+  .main:after {
+    clear: both; }
   @media screen and (min-height: 800px) and (min-width: 64em) {
     .main {
       margin-top: 20px;

@@ -25,6 +25,8 @@ body {
 }
 
 .main {
+    @include clearfix;
+
     margin-top: 10px;
 
     @include media(min-height $break-h-s min-width $break-l) {
