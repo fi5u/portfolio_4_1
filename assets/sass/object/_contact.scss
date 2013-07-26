@@ -8,11 +8,11 @@
         @include clearfix;
         @include span-columns(12);
         position: relative;
-        margin-bottom: $gutter;
     }
 
     .contact__inputgroup--textarea {
         height: 170px;
+        margin-bottom: $gutter;
     }
 
     input:not(input[type="submit"]) {

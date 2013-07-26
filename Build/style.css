@@ -2040,8 +2040,8 @@ textarea {
     color: #6cc5c9 !important; }
 
 input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"] {
-  height: 1.4em;
-  height: 2.8em; }
+  height: 2.8em;
+  margin-bottom: 1em; }
 
 textarea {
   padding-top: 0.7em; }
@@ -2478,8 +2478,7 @@ body {
     float: left;
     margin-right: 1.20482%;
     width: 100%;
-    position: relative;
-    margin-bottom: 1em; }
+    position: relative; }
     .contact .contact__inputgroup:before, .contact .contact__inputgroup:after {
       content: " ";
       display: table; }
@@ -2488,7 +2487,8 @@ body {
     .contact .contact__inputgroup:last-child {
       margin-right: 0; }
   .contact .contact__inputgroup--textarea {
-    height: 170px; }
+    height: 170px;
+    margin-bottom: 1em; }
   .contact input:not(input[type="submit"]) {
     display: block;
     float: left;

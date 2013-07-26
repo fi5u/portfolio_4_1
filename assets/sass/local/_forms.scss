@@ -55,8 +55,8 @@ textarea {
 }
 
 #{$all-text-inputs} {
-    height: $size-small-btn;
     height: $size-small-btn * 2;
+    margin-bottom: $size-padding-m;
 }
 
 textarea {
