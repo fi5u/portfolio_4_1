@@ -33,6 +33,8 @@
         <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/respond.min.js'></script>
         <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/selectivizr-min.js'></script>
     <![endif]-->
+
+    <?php wp_head(); ?>
 </head>
 <body>
     <div class="outer-wrap">
