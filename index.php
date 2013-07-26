@@ -16,11 +16,11 @@
                     <?php include(locate_template("part-portfolio-item.php")); ?>
                 </div>
             </div>
-        </div>
 
-        <div class="main__bio-mailgroup">
-            <?php get_template_part("part-bio"); ?>
-            <?php get_template_part("part-contact"); ?>
+            <div class="main__bio-mailgroup">
+                <?php get_template_part("part-bio"); ?>
+                <?php get_template_part("part-contact"); ?>
+            </div>
         </div>
 
 <?php get_footer(); ?>
