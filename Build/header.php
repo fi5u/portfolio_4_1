@@ -52,7 +52,7 @@
                         menu
                     </div>
                     <div class="page-header__logo">
-                        <a class='current' href="index.html">Tommy Fisher web developer</a>
+                        <a class='current' href="<?php echo get_bloginfo('url'); ?>">Tommy Fisher web developer</a>
                     </div>
                 </div>
             </header>
