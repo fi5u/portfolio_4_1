@@ -29,7 +29,7 @@
                             <?php if( get_field("github") ) : ?>
                                 <a href="<?php the_field("github"); ?>">GitHub</a><br>
                             <?php endif; ?>
-                            <a href="<?php home_url(); ?>">back home</a>
+                            <a href="<?php echo get_bloginfo('url'); ?>">back home</a>
                         </p>
                     </div>
                 </div>
