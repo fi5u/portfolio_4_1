@@ -39,7 +39,7 @@
 .no-js .page-header__logo,
 .no-svg .page-header__logo {
     @include media($break-s) {
-        background-image: url(logo_main_100h.png);
+        background-image: url(assets/img/logo_main_100h.png);
     }
 }
 

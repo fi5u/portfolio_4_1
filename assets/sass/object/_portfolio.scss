@@ -73,10 +73,13 @@
     @include prefixer(transition-delay, 0.6s, webkit moz spec);
 
     top: 100%;
-    opacity: 0.8;
     z-index: 2;
     padding: ($size-small-btn + $size-padding-s) $size-padding-s $size-padding-s;
-    background: $col6;
+    background: rgba($col6,0.9);
+}
+
+.no-rgba .portfolio__item__textblock {
+    background: url(assets/img/overlay.png) repeat;
 }
 
 .portfolio__item:hover {
