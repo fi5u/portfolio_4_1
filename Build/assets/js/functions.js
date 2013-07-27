@@ -191,18 +191,30 @@ function lightbox(url) {
         $('.lightbox__img').html('<img src="' + url + '">');
         $('.lightbox').fadeIn("fast");
     } else {
-        var lightbox =
-        '<div class="lightbox">' +
-            '<div class="lightbox__content">' +
-                '<div class="lightbox__img">' +
-                    '<img src="' + url +'">' +
+        if( prevUrl === nextUrl ) { //don't display controls
+            var lightbox =
+            '<div class="lightbox">' +
+                '<div class="lightbox__content">' +
+                    '<div class="lightbox__img">' +
+                        '<img src="' + url +'">' +
+                    '</div>' +
                 '</div>' +
-                '<div class="lightbox__controls">' +
-                    '<a class="lightbox__control--left"></a>' +
-                    '<a class="lightbox__control--right"></a>' +
+            '</div>';
+
+        } else { //include controls
+            var lightbox =
+            '<div class="lightbox">' +
+                '<div class="lightbox__content">' +
+                    '<div class="lightbox__img">' +
+                        '<img src="' + url +'">' +
+                    '</div>' +
+                    '<div class="lightbox__controls">' +
+                        '<a class="lightbox__control--left"></a>' +
+                        '<a class="lightbox__control--right"></a>' +
+                    '</div>' +
                 '</div>' +
-            '</div>' +
-        '</div>';
+            '</div>';
+        }
         $('body').append(lightbox);
     }
 
