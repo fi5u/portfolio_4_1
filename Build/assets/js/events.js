@@ -18,6 +18,12 @@ $(".portfolio__item").bind('touchstart', function(e){
 $("body").on("click", ".lightbox__controls a", function(event) {
     var url = $(this).attr("href");
     lightbox(url);
+
+    $.preload(url,{
+        interval : 200
+    }).progress(function (image) {
+        lightboxVCenter();
+    });
 });
 
 $("#imageblock").on("click", "a#imageblock-link", function(event) {
