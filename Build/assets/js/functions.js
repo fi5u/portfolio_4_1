@@ -1,3 +1,103 @@
+/*function checkFileExists(testUrl) {
+    var returnVar;
+    //check if file exists
+    $.ajax({
+        url: testUrl,
+        type:'HEAD',
+        error: function() {
+            returnVar = 0;
+        },
+        success: function() {
+            returnVar = 1;
+        }
+    });
+    return returnVar;
+}
+*/
+
+function is_retina(url) {
+    var retinaExt = "@2x";
+    //remove extension
+    var filename = url.substr(0, url.lastIndexOf('.'));
+    var testStr = filename.slice( -3 );
+
+    if(testStr === retinaExt) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function getRetinaUrl(url) {
+    //get the filetype
+    var urlFiletype = url.split(".").pop();
+    //get filename without ext
+    var urlFilename = url.substr(0, url.lastIndexOf('.'));
+    //get retina url
+    var retinaUrl = urlFilename + "@2x." + urlFiletype;
+
+    return retinaUrl;
+}
+
+function singleLarge() {
+    if( retina ) {
+        //change first image link to retina
+        var testUrl = $("#imageblock-link").attr("href");
+        if( !is_retina(testUrl) ) {
+            var retinaUrl = getRetinaUrl(testUrl);
+
+            //check if file exists
+            $.ajax({
+                url: retinaUrl,
+                type:'HEAD',
+                error: function() {
+                    //file not exists
+                },
+                success: function() {
+                    $("#imageblock-link").attr("href", retinaUrl);
+                }
+            });
+        }
+
+        //change each filmstrip img and link to retina
+        $("#filmstrip a").each(function() {
+            var self = $(this);
+            var testLg = $(this).attr("href");
+            var testMed = $(this).children("img").attr("data-medium");
+
+            if( !is_retina(testLg) ) {
+                var retinaLgUrl = getRetinaUrl(testLg);
+                //check if file exists
+                $.ajax({
+                    url: retinaLgUrl,
+                    type:'HEAD',
+                    error: function() {
+                        //file not exists
+                    },
+                    success: function() {
+                        $(self).attr("href", retinaLgUrl);
+                    }
+                });
+            }
+
+            if( !is_retina(testMed) ) {
+                var retinaMedUrl = getRetinaUrl(testMed);
+                //check if file exists
+                $.ajax({
+                    url: retinaMedUrl,
+                    type:'HEAD',
+                    error: function() {
+                        //file not exists
+                    },
+                    success: function() {
+                        $(self).children("img").attr("data-medium", retinaMedUrl);
+                    }
+                });
+            }
+        });
+    }
+}
+
 function swapBackgroundImgs() {
     if( retina ) {
         $(".portfolio__item__visual").each(function() {
@@ -5,12 +105,8 @@ function swapBackgroundImgs() {
             var cssProp = $(self).css("backgroundImage");
             //get the url on its own
             var url = cssProp.substring(4).slice(0, -1);
-            //get the filetype
-            var urlFiletype = url.split(".").pop();
-            //get filename without ext
-            var urlFilename = url.substr(0, url.lastIndexOf('.'));
-            //get retina url
-            var retinaUrl = urlFilename + "@2x." + urlFiletype;
+
+            var retinaUrl = getRetinaUrl(url);
 
             //check if file exists
             $.ajax({
@@ -25,6 +121,15 @@ function swapBackgroundImgs() {
                     });
                 }
             });
+
+/*            if( checkFileExists(retinaUrl) === 1 ) {
+                alert("exists");
+                $(self).css({
+                    backgroundImage: "url("+retinaUrl+")"
+                });
+            } else {
+                alert("no exist");
+            }*/
         });
     }
 }
@@ -109,22 +214,79 @@ function lightbox(url) {
 }
 
 function updateSingleView(medium, large) {
-    $("#imageblock-link").attr("href",large);
-    $("#imageblock-link img").attr("src", medium);
+    if( retina ) {
+        var retinaMed = getRetinaUrl(medium);
+        var retinaLg = getRetinaUrl(large);
+
+        $.ajax({
+            url: retinaLg,
+            type:'HEAD',
+            error: function() {
+                $("#imageblock-link").attr("href", large);
+            },
+            success: function() {
+                $("#imageblock-link").attr("href", retinaLg);
+            }
+        });
+
+        $.ajax({
+            url: retinaMed,
+            type:'HEAD',
+            error: function() {
+                $("#imageblock-link img").attr("src", medium);
+            },
+            success: function() {
+                $("#imageblock-link img").attr("src", retinaMed);
+            }
+        });
+
+
+    } else {
+        $("#imageblock-link").attr("href",large);
+        $("#imageblock-link img").attr("src", medium);
+    }
 }
 
 function preloadImages() {
-    if( $("#filmstrip a").length ) {
-        $("#filmstrip a").each(function() {
-            var urlLg = $(this).attr("href"),
-                urlMed = $(this).children(),
-                imgLg = new Image(),
-                imgMed = new Image();
+    $("#filmstrip a").each(function() {
+        var urlLg = $(this).attr("href"),
+            urlMed = $(this).children("img").attr("data-medium"),
+            imgLg = new Image(),
+            imgMed = new Image();
 
+        if( retina ) {
+            if( !is_retina(urlLg) ) {
+                var retinaLg = getRetinaUrl(urlLg);
+
+                //check if file exists
+                $.ajax({
+                    url: retinaLg,
+                    type:'HEAD',
+                    success: function() {
+                        urlLg = retinaLg;
+                        imgLg.src = urlLg;
+                    }
+                });
+            }
+
+            if( !is_retina(urlMed) ) {
+                var retinaMed = getRetinaUrl(urlMed);
+
+                //check if file exists
+                $.ajax({
+                    url: retinaMed,
+                    type:'HEAD',
+                    success: function() {
+                        urlMed = retinaMed;
+                        imgMed.src = urlLg;
+                    }
+                });
+            }
+        } else { //not retina
             imgLg.src = urlLg;
             imgMed.src = urlLg;
-        });
-    }
+        }
+    });
 }
 
 var waitOnEvent = (function () {
