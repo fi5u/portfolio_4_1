@@ -16,27 +16,31 @@
 */
 
 function is_retina(url) {
-    var retinaExt = "@2x";
-    //remove extension
-    var filename = url.substr(0, url.lastIndexOf('.'));
-    var testStr = filename.slice( -3 );
+    if(url) {
+        var retinaExt = "@2x";
+        //remove extension
+        var filename = url.substr(0, url.lastIndexOf('.'));
+        var testStr = filename.slice( -3 );
 
-    if(testStr === retinaExt) {
-        return true;
-    } else {
-        return false;
+        if(testStr === retinaExt) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
 function getRetinaUrl(url) {
-    //get the filetype
-    var urlFiletype = url.split(".").pop();
-    //get filename without ext
-    var urlFilename = url.substr(0, url.lastIndexOf('.'));
-    //get retina url
-    var retinaUrl = urlFilename + "@2x." + urlFiletype;
+    if( url ) {
+        //get the filetype
+        var urlFiletype = url.split(".").pop();
+        //get filename without ext
+        var urlFilename = url.substr(0, url.lastIndexOf('.'));
+        //get retina url
+        var retinaUrl = urlFilename + "@2x." + urlFiletype;
 
-    return retinaUrl;
+        return retinaUrl;
+    }
 }
 
 function singleLarge() {
@@ -138,9 +142,11 @@ function swapBackgroundImgs() {
 function toggleTextarea(activate) {
     if(activate) {
         $("textarea").addClass("active");
+        $("input[type='submit']").addClass("active");
     } else {
         if($("textarea").val() === "") {
             $("textarea").removeClass("active");
+            $("input[type='submit']").removeClass("active");
         }
     }
 }

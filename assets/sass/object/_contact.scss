@@ -8,6 +8,7 @@
         @include clearfix;
         @include span-columns(12);
         position: relative;
+        z-index: 2;
     }
 
     .contact__inputgroup--textarea {
@@ -53,8 +54,17 @@
         }
     }
 
-    button {
+    button,
+    input[type="submit"] {
+        @include transition(all 0.4s $timing-function);
+
+        position: absolute;
+        top: 118px;
         float: right;
+
+        &.active {
+            top: 172px;
+        }
     }
 
     @include media($break-m) {
