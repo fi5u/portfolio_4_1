@@ -2066,7 +2066,8 @@ span.wpcf7-not-valid-tip {
 
 img {
   width: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto; }
 
 body {
   color: #d6fdff; }

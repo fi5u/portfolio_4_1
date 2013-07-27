@@ -15,7 +15,7 @@
                     <?php $med_img_url = wp_get_attachment_image_src( $first_row_image, 'single-med' ); ?>
 
                     <a href="<?php echo $large_img_url[0]; ?>" id="imageblock-link">
-                        <img src="<?php echo $med_img_url[0]; ?>" alt="<?php echo $first_row_desc; ?>">
+                        <img src="<?php echo $med_img_url[0]; ?>" alt="<?php echo $first_row_desc; ?>" height="auto">
                     </a>
                 </div>
 
@@ -53,9 +53,9 @@
                         <?php endif; ?>
                         <?php if( get_field("responsive") ) : ?>
                             <?php $responsive_id = get_field("responsive"); ?>
-                            <?php $responsive_large_url = wp_get_attachment_url( $responsive_id[0], 'single-large' ); ?>
-                            <?php $responsive_med_url = wp_get_attachment_url( $responsive_id[0], 'single-med' ); ?>
-                            <a href="<?php echo $responsive_large_url[0]; ?>" class="single__filmstrip__responsive"><img src="assets/img/responsive.svg" data-medium="<?php echo $responsive_med_url[0]; ?>" alt="Responsive views" class="single__preview"></a>
+                            <?php $responsive_large_url = wp_get_attachment_image_src( $responsive_id, 'single-large' ); ?>
+                            <?php $responsive_med_url = wp_get_attachment_image_src( $responsive_id, 'single-med' ); ?>
+                            <a href="<?php echo $responsive_large_url[0]; ?>" class="single__filmstrip__responsive"><img src="<?php bloginfo('template_url'); ?>/assets/img/responsive.svg" data-medium="<?php echo $responsive_med_url[0]; ?>" alt="Responsive views" class="single__preview"></a>
                         <?php endif; ?>
                     <?php endwhile; endif; ?>
                 </div>
