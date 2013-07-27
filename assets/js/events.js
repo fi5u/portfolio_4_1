@@ -18,6 +18,13 @@ $("body").on("click", ".lightbox__controls a", function(event) {
 $("#imageblock").on("click", "a#imageblock-link", function(event) {
     var url = $("#imageblock a").attr("href");
     lightbox(url);
+
+    $.preload(url,{
+        interval : 200
+    }).progress(function (image) {
+        lightboxVCenter();
+    });
+
 });
 
 
