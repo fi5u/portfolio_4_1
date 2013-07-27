@@ -7,6 +7,7 @@
                     <h3 class="portfolio__item__title"><?php the_title(); ?></h3>
 
                     <?php $rows = get_field('images'); ?>
+                    <?php $image_count = count($rows); ?>
                     <?php $first_row = $rows[0]; ?>
                     <?php $first_row_image = $first_row['image']; ?>
                     <?php $first_row_desc = $first_row['description']; ?>
@@ -40,7 +41,7 @@
 
             <div class="single__filmstrip-contact">
                 <div class="single__filmstrip" id="filmstrip">
-                    <?php if( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                    <?php if( have_posts() && $image_count > 1 ) : while ( have_posts() ) : the_post(); ?>
                         <?php if( get_field("images") ): ?>
                             <?php while( has_sub_field("images") ) : ?>
                                 <?php $img_id = get_sub_field("image"); ?>
