@@ -1,0 +1,1 @@
+var retina = window.devicePixelRatio >= 1.5;

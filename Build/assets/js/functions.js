@@ -1,3 +1,35 @@
+function swapBackgroundImgs() {
+    if( retina ) {
+        $(".portfolio__item__visual").each(function() {
+            var self = $(this);
+            var cssProp = $(self).css("backgroundImage");
+            //get the url on its own
+            var url = cssProp.substring(4).slice(0, -1);
+            //get the filetype
+            var urlFiletype = url.split(".").pop();
+            //get filename without ext
+            var urlFilename = url.substr(0, url.lastIndexOf('.'));
+            //get retina url
+            var retinaUrl = urlFilename + "@2x." + urlFiletype;
+
+            //check if file exists
+            $.ajax({
+                url: retinaUrl,
+                type:'HEAD',
+                error: function() {
+                    //file not exists
+                },
+                success: function() {
+                    $(self).css({
+                        backgroundImage: "url("+retinaUrl+")"
+                    });
+                }
+            });
+        });
+    }
+}
+
+
 function toggleTextarea(activate) {
     if(activate) {
         $("textarea").addClass("active");
