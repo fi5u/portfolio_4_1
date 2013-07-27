@@ -106,16 +106,6 @@
     }
 }
 
-.single .contact__inputgroup--textarea {
-    @include media($break-m) {
-        padding-left: $gutter;
-    }
-
-    @include media($break-l) {
-        padding-left: 0;
-    }
-}
-
 .single--404__block1,
 .single--404__block2 {
     @include span-columns(12);

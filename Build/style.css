@@ -2763,13 +2763,6 @@ body {
     .single .contact__inputgroup:last-child {
       margin-right: 0; } }
 
-@media screen and (min-width: 48em) {
-  .single .contact__inputgroup--textarea {
-    padding-left: 1em; } }
-@media screen and (min-width: 64em) {
-  .single .contact__inputgroup--textarea {
-    padding-left: 0; } }
-
 .single--404__block1,
 .single--404__block2 {
   display: block;
