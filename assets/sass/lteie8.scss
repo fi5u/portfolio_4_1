@@ -1,3 +1,22 @@
+@media screen and (min-width: 48em) {
+    .portfolio {
+
+    }
+
+    .main__bio-mailgroup {
+        margin-right: 0;
+    }
+
+    #input-name {
+        float: left;
+        margin-left: 0;
+    }
+
+    #input-email {
+
+    }
+}
+
 .portfolio__item__visual {
     -ms-behavior: url(/backgroundsize.min.htc);
 }
