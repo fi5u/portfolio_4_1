@@ -10,6 +10,11 @@ $("textarea").focusout(function() {
     toggleTextarea();
 });
 
+$(".portfolio__item").bind('touchstart', function(e){
+    $(".portfolio__item.active").removeClass("active");
+    $(this).addClass("active");
+});
+
 $("body").on("click", ".lightbox__controls a", function(event) {
     var url = $(this).attr("href");
     lightbox(url);
@@ -28,7 +33,7 @@ $("#imageblock").on("click", "a#imageblock-link", function(event) {
 });
 
 
-$("body").on("click", ".lightbox, .lightbox__controls", function(event) {
+$("body").on("click touchstart", ".lightbox, .lightbox__controls", function(event) {
     event.stopPropagation();
     if( $(this).attr("class") !== "lightbox__controls" ) {
         lightboxAction("close");

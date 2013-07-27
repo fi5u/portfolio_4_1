@@ -82,7 +82,8 @@
     background: url(assets/img/overlay.png) repeat;
 }
 
-.portfolio__item:hover {
+.portfolio__item:hover,
+.portfolio__item.active {
     .portfolio__item__textblock {
         @include prefixer(transition-delay, 0.2s, webkit moz spec);
         top: 0%;
