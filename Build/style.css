@@ -1999,6 +1999,7 @@ input[type="submit"] {
   margin: 0;
   padding: 0 0.6em 1.5em;
   border: none;
+  border-radius: 0;
   font-family: "Idealist Sans Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1em;
   line-height: 1.5em;

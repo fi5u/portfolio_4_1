@@ -9,6 +9,7 @@ input[type="submit"] {
     margin: 0;
     padding: 0 $size-padding-s ($size-padding-s * 2.5);
     border: none;
+    border-radius: 0;
 
     font-family: $font;
     font-size: $font-size-m;
