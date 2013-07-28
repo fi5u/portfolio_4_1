@@ -1,20 +1,3 @@
-/*function checkFileExists(testUrl) {
-    var returnVar;
-    //check if file exists
-    $.ajax({
-        url: testUrl,
-        type:'HEAD',
-        error: function() {
-            returnVar = 0;
-        },
-        success: function() {
-            returnVar = 1;
-        }
-    });
-    return returnVar;
-}
-*/
-
 function is_retina(url) {
     if(url) {
         var retinaExt = "@2x";
@@ -125,15 +108,6 @@ function swapBackgroundImgs() {
                     });
                 }
             });
-
-/*            if( checkFileExists(retinaUrl) === 1 ) {
-                alert("exists");
-                $(self).css({
-                    backgroundImage: "url("+retinaUrl+")"
-                });
-            } else {
-                alert("no exist");
-            }*/
         });
     }
 }

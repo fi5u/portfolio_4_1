@@ -22,9 +22,9 @@
     <link rel="icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_url'); ?>/apple-touch-icon-precomposed.png">
 
-    <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/style.css'>
+    <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/09a1738133abd07774f2ee4edbead4cb.css'>
 
-    <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/modernizr.full.2.6.2.js'></script> <!-- change to production before launch: -->
+    <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/modernizr.custom.js'></script>
 
     <!--[if lt IE 9]>
         <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/assets/sass/lteie8.css'>
