@@ -7,3 +7,8 @@
     margin-left: 0; } }
 .portfolio__item__visual {
   -ms-behavior: url(../../backgroundsize.min.htc); }
+
+.lightbox__content {
+  display: block;
+  width: 100%;
+  height: 100%; }

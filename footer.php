@@ -13,7 +13,13 @@
         <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/jquery-migrate-1.2.1.min.js'></script>
     <!--<![endif]-->
 
-    <script src='<?php bloginfo('template_url'); ?>/assets/js/191860062635fbd6a619eb59e097911b.js'></script>
+        <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/jquery.flexorder.js'></script>
+        <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/svgeezy.js'></script>
+        <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/jquery.preload.js'></script>
+        <script src='<?php bloginfo('template_url'); ?>/assets/js/variables.js'></script>
+        <script src='<?php bloginfo('template_url'); ?>/assets/js/functions.js'></script>
+        <script src='<?php bloginfo('template_url'); ?>/assets/js/script.js'></script>
+        <script src='<?php bloginfo('template_url'); ?>/assets/js/events.js'></script>
 
     <script>
         var _gaq=[['_setAccount','UA-29166095-1'],['_trackPageview']];

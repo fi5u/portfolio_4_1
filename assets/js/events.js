@@ -16,6 +16,7 @@ $(".portfolio__item").bind('touchstart', function(e){
 });
 
 $("body").on("click", ".lightbox__controls a", function(event) {
+    event.preventDefault();
     var url = $(this).attr("href");
     lightbox(url);
 
@@ -27,6 +28,7 @@ $("body").on("click", ".lightbox__controls a", function(event) {
 });
 
 $("#imageblock").on("click", "a#imageblock-link", function(event) {
+    event.preventDefault();
     var url = $("#imageblock a").attr("href");
     lightbox(url);
 

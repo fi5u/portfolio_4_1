@@ -2,12 +2,10 @@
 
 //REGISTER/DEREGISTER
     //deregister jquery
-function tommyfisher_deregister_common_js() {
-    if(!is_admin()) {
-        wp_deregister_script('jquery');
-    }
+if( !is_admin()){
+    wp_deregister_script('jquery');
 }
-add_action('init', 'tommyfisher_deregister_common_js');
+
 
     //register menus
 /*function register_menus() {

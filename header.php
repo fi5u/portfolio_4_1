@@ -13,7 +13,7 @@
     <title><?php if(is_home()) { echo bloginfo("name"); echo " | "; echo bloginfo("description"); } else { echo wp_title(" » ", false, right); echo bloginfo("name"); } ?></title>
 
     <meta name="title" content="<?php if(is_home()) { echo bloginfo("name"); echo " | "; echo bloginfo("description"); } else { echo wp_title(" » ", false, right); echo bloginfo("name"); } ?>">
-    <meta name="description" content="The online portfolio of responsive web developer Tommy Fisher (Helsinki, Finland).">
+    <meta name="description" content="<?php echo bloginfo("description"); ?>">
     <meta name="author" content="Tommy Fisher">
     <meta name="Copyright" content="Copyright 2013. All Rights Reserved.">
 
@@ -22,7 +22,7 @@
     <link rel="icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_url'); ?>/apple-touch-icon-precomposed.png">
 
-    <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/09a1738133abd07774f2ee4edbead4cb.css'>
+    <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/style.css'>
 
     <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/modernizr.custom.js'></script>
 
@@ -44,7 +44,7 @@
                     <nav class="nav header-nav">
 
                         <ul>
-                            <li class="header-nav__message"><a href="#">Message</a></li>
+                            <li class="header-nav__message"><a href="#contact">Message</a></li>
                             <li class="header-nav__twitter"><a href="https://twitter.com/tommybfisher/">Twitter</a></li>
                             <li class="header-nav__linkedin"><a href="fi.linkedin.com/in/tommybfisher/">LinkedIn</a></li>
                         </ul>

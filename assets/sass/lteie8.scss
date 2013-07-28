@@ -1,8 +1,4 @@
 @media screen and (min-width: 48em) {
-    .portfolio {
-
-    }
-
     .main__bio-mailgroup {
         margin-right: 0;
     }
@@ -19,4 +15,14 @@
 
 .portfolio__item__visual {
     -ms-behavior: url(/backgroundsize.min.htc);
+}
+
+.lightbox__content {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.lightbox img {
+
 }

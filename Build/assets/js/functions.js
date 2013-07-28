@@ -168,7 +168,7 @@ function lightbox(url) {
     }
 
     if( $('.lightbox').length > 0 ) {
-        $('.lightbox__img').html('<img src="' + url + '" id="lightbox-img" onload="$(this).data(\'loaded\', \'loaded\');">');
+        $('.lightbox__img').html('<img src="' + url + '" id="lightbox-img">');
         $('.lightbox').fadeIn("fast");
     } else {
         if( prevUrl === nextUrl ) { //don't display controls
@@ -176,7 +176,7 @@ function lightbox(url) {
             '<div class="lightbox">' +
                 '<div class="lightbox__content">' +
                     '<div class="lightbox__img">' +
-                        '<img src="' + url +'" id="lightbox-img" onload="$(this).data(\'loaded\', \'loaded\');">' +
+                        '<img src="' + url +'" id="lightbox-img">' +
                     '</div>' +
                 '</div>' +
             '</div>';
@@ -186,7 +186,7 @@ function lightbox(url) {
             '<div class="lightbox">' +
                 '<div class="lightbox__content">' +
                     '<div class="lightbox__img">' +
-                        '<img src="' + url +'" id="lightbox-img" onload="$(this).data(\'loaded\', \'loaded\');">' +
+                        '<img src="' + url +'" id="lightbox-img">' +
                     '</div>' +
                     '<div class="lightbox__controls">' +
                         '<a class="lightbox__control--left"></a>' +
@@ -200,8 +200,6 @@ function lightbox(url) {
 
     $(".lightbox__control--right").attr("href",nextUrl);
     $(".lightbox__control--left").attr("href",prevUrl);
-
-    event.preventDefault();
 }
 
 function updateSingleView(medium, large) {
