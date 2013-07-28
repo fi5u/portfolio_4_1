@@ -139,6 +139,10 @@ function bindFlexorder() {
     });
 }
 
+function bindPlaceholder() {
+    $('input, textarea').placeholder();
+}
+
 function bindSvgeezy() {
     svgeezy.init(false, 'png');
 }

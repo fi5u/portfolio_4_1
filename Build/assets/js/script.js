@@ -3,6 +3,7 @@ $(document).ready(function() {
     singleLarge();
     bindFlexorder();
     bindSvgeezy();
+    bindPlaceholder();
 });
 
 $(window).load(function() {

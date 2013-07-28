@@ -14,8 +14,9 @@
     <!--<![endif]-->
 
         <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/jquery.flexorder.js'></script>
-        <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/svgeezy.js'></script>
+        <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/jquery.placeholder.js'></script>
         <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/jquery.preload.js'></script>
+        <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/svgeezy.js'></script>
         <script src='<?php bloginfo('template_url'); ?>/assets/js/variables.js'></script>
         <script src='<?php bloginfo('template_url'); ?>/assets/js/functions.js'></script>
         <script src='<?php bloginfo('template_url'); ?>/assets/js/script.js'></script>
