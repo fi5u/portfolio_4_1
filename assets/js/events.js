@@ -58,6 +58,7 @@ $("#filmstrip").on("click", "a", function(event) {
     updateSingleView(medium, large);
 });
 
+
 $(window).resize(function() {
     waitOnEvent(function() {
         lightboxVCenter();

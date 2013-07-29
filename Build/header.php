@@ -5,6 +5,8 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
+<script>templateUrl = "<?php bloginfo('template_url'); ?>";</script>
+
 <head>
 
     <meta charset="utf-8">
@@ -22,19 +24,20 @@
     <link rel="icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_url'); ?>/apple-touch-icon-precomposed.png">
 
-    <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/style.css'>
+    <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/c034f34b69799ae13239dfd275839299.css'>
 
     <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/modernizr.custom.js'></script>
 
     <!--[if lt IE 9]>
         <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/assets/sass/lteie8.css'>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="<?php bloginfo('template_url'); ?>/assets/js/lib/jquery-1.10.1.min.js"><\/script>')</script>
-        <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/respond.min.js'></script>
-        <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/selectivizr-min.js'></script>
     <![endif]-->
 
     <?php wp_head(); ?>
+
+    <!--[if lt IE 9]>
+        <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/respond.min.js'></script>
+        <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/selectivizr-min.js'></script>
+    <![endif]-->
 </head>
 <body>
     <div class="outer-wrap">
@@ -46,7 +49,7 @@
                         <ul>
                             <li class="header-nav__message"><a href="#contact">Message</a></li>
                             <li class="header-nav__twitter"><a href="https://twitter.com/tommybfisher/">Twitter</a></li>
-                            <li class="header-nav__linkedin"><a href="fi.linkedin.com/in/tommybfisher/">LinkedIn</a></li>
+                            <li class="header-nav__linkedin"><a href="http://fi.linkedin.com/in/tommybfisher/">LinkedIn</a></li>
                         </ul>
                     </nav>
 

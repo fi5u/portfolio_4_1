@@ -7,20 +7,11 @@
         </div>
     </div>
 
-    <!--[if gte IE 9]><!-->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="<?php bloginfo('template_url'); ?>/assets/js/lib/jquery-2.0.0.min.js"><\/script>')</script>
-        <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/jquery-migrate-1.2.1.min.js'></script>
-    <!--<![endif]-->
+    <!-- js libs -->
+    <script src='<?php bloginfo('template_url'); ?>/assets/js/83af1fbfdc94f07e4ec205af5c9a79b6.js'></script>
 
-        <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/jquery.flexorder.js'></script>
-        <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/jquery.placeholder.js'></script>
-        <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/jquery.preload.js'></script>
-        <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/svgeezy.js'></script>
-        <script src='<?php bloginfo('template_url'); ?>/assets/js/variables.js'></script>
-        <script src='<?php bloginfo('template_url'); ?>/assets/js/functions.js'></script>
-        <script src='<?php bloginfo('template_url'); ?>/assets/js/script.js'></script>
-        <script src='<?php bloginfo('template_url'); ?>/assets/js/events.js'></script>
+    <!-- js scripts -->
+    <script src='<?php bloginfo('template_url'); ?>/assets/js/f3a1aebb2922607e5f2aece47cfe3635.js'></script>
 
     <script>
         var _gaq=[['_setAccount','UA-29166095-1'],['_trackPageview']];
