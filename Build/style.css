@@ -2603,8 +2603,10 @@ body {
   padding: 10px 5px 0;
   border-top: 1px solid #6cc5c9; }
   .page-footer p {
-    font-family: "Idealist Sans Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 0.8em; }
+  .page-footer p,
+  .page-footer a {
+    font-family: "Idealist Sans Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
   .page-footer span {
     margin: 0 1.4em; }
     .page-footer span:first-child {

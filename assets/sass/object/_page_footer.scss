@@ -3,8 +3,12 @@
     border-top: 1px solid $col1;
 
     p {
-        font-family: $font;
         font-size: $font-size-s;
+    }
+
+    p,
+    a {
+        font-family: $font;
     }
 
     span {
