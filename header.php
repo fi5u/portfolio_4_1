@@ -24,7 +24,7 @@
     <link rel="icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_url'); ?>/apple-touch-icon-precomposed.png">
 
-    <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/c034f34b69799ae13239dfd275839299.css'>
+    <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/edc163c2aac4f585daa0c326f721da40.css'>
 
     <script src='<?php bloginfo('template_url'); ?>/assets/js/lib/modernizr.custom.js'></script>
 
