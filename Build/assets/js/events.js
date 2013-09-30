@@ -2,6 +2,10 @@ $("#menu-trigger").click(function() {
     $("html").toggleClass("nav-open");
 });
 
+$(".header-nav__message a").click(function() {
+    $("html").toggleClass("nav-open");
+});
+
 $("textarea").focusin(function() {
     toggleTextarea(true);
 });

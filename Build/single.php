@@ -30,6 +30,10 @@
                             <?php if( get_field("github") ) : ?>
                                 <a href="<?php the_field("github"); ?>">GitHub</a><br>
                             <?php endif; ?>
+                            <?php if( get_field("website_address") ) : ?>
+                                <a href="<?php the_field("website_address"); ?>" target="_blank">visit <?php the_title(); ?> site</a><br>
+                            <?php endif; ?>
+
                             <a href="<?php echo get_bloginfo('url'); ?>">home</a>
                         </p>
                     </div>

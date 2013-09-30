@@ -7,11 +7,7 @@
         </div>
     </div>
 
-    <!-- js libs -->
-    <script src='<?php bloginfo('template_url'); ?>/assets/js/83af1fbfdc94f07e4ec205af5c9a79b6.js'></script>
-
-    <!-- js scripts -->
-    <script src='<?php bloginfo('template_url'); ?>/assets/js/f3a1aebb2922607e5f2aece47cfe3635.js'></script>
+    <script src='<?php bloginfo('template_url'); ?>/assets/js/4eaae996d9290eb292c2fa6d78cbce3c.js'></script>
 
     <script>
         var _gaq=[['_setAccount','UA-29166095-1'],['_trackPageview']];
