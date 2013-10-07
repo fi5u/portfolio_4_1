@@ -396,6 +396,9 @@ $(window).resize(function() {
     }, 500, "reset1");
 });
 
+$( window ).scroll(function() {
+    $(".portfolio__item.active").removeClass("active");
+});
 
 
 })(jQuery);
