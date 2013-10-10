@@ -334,17 +334,46 @@ $(".header-nav__message a").click(function() {
 });
 
 $("textarea").focusin(function() {
+    ga('send', 'event', 'textarea', 'focus');
     toggleTextarea(true);
 });
 
 $("textarea").focusout(function() {
+    ga('send', 'event', 'textarea', 'blur');
     toggleTextarea();
 });
 
+var portfolioItemTimer;
+
 $(".portfolio__item").bind('touchstart', function(e){
+    ga('send', 'event', 'portfolioitem', 'hover', 'touch hover in');
+    portfolioItemTimer = setTimeout(function(){
+        ga('send', 'event', 'portfolioitem', 'hover', 'touch hover duration', 1);
+    }, 1000);
+
     $(".portfolio__item.active").removeClass("active");
     $(this).addClass("active");
 });
+
+$(".portfolio__item").bind('touchend', function(e){
+    ga('send', 'event', 'portfolioitem', 'hover', 'touch hover out');
+    clearTimeout(portfolioItemTimer);
+
+    $(".portfolio__item.active").removeClass("active");
+    $(this).removeClass("active");
+});
+
+$(".portfolio__item").hover(function() {
+    ga('send', 'event', 'portfolioitem', 'hover', 'mouse hover in');
+    portfolioItemTimer = setTimeout(function(){
+        ga('send', 'event', 'portfolioitem', 'hover', 'mouse hover duration', 1);
+    }, 1000);
+
+}, function() {
+    ga('send', 'event', 'portfolioitem', 'hover', 'mouse hover out');
+    clearTimeout(portfolioItemTimer);
+});
+
 
 $("body").on("click", ".lightbox__controls a", function(event) {
     event.preventDefault();
